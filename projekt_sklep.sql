@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `klienci` (
   `ID_klient` int(11) NOT NULL,
-  `Imie` varchar(30) NOT NULL,
-  `Nazwisko` varchar(30) NOT NULL,
-  `e-mail` varchar(30) NOT NULL,
+  `imie` varchar(30) NOT NULL,
+  `nazwisko` varchar(30) NOT NULL,
+  `numer` int(9) NOT NULL,
   `login` varchar(30) NOT NULL,
   `haslo` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -44,9 +44,9 @@ CREATE TABLE `klienci` (
 
 CREATE TABLE `pracownicy` (
   `ID_pracownik` int(11) NOT NULL,
-  `Imie` varchar(30) NOT NULL,
-  `Nazwisko` varchar(30) NOT NULL,
-  `e-mail` varchar(30) NOT NULL,
+  `imie` varchar(30) NOT NULL,
+  `nazwisko` varchar(30) NOT NULL,
+  `numer` int(9) NOT NULL,
   `login` varchar(30) NOT NULL,
   `haslo` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
