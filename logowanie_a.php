@@ -37,7 +37,7 @@ background-color:#191919;
 color:white;
 padding:10px;
 margin-top:10px;
-margin-bottom:-10px;
+margin-bottom:10px;
 }
 
 .przycisk:hover{
@@ -110,11 +110,12 @@ transform: translate(-50%, -50%);
 <br>
 <br>
 
-<a href="panel_a.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; " class="przycisk" style="font-weight:bold;" type="submit">ZALOGUJ</button></a>
 
+<a href="panel_a.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold;  margin-top:10px; " class="przycisk" style="font-weight:bold;" type="submit">ZALOGUJ</button></a>
 </fieldset>
 
 </form>
+<a href="index.html"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold;  margin:10px 0; " class="przycisk" id="logowanie_p" style="font-weight:bold;">POWRÓT</button></a>
 
 </div>
 

@@ -37,7 +37,7 @@ background-color:#191919;
 color:white;
 padding:10px;
 margin-top:10px;
-margin-bottom:-10px;
+margin-bottom:10px;
 margin-left:2.6px;
 margin-right:2.6px;
 }
@@ -89,7 +89,6 @@ transform: translate(-50%, -50%);
 <div class="login">
 
 <fieldset><legend><label><h1>REJESTRACJA</h1></label></legend>
-<h5>PANEL KLIENTA</h5>
 
 <form id="userForm" method="POST">
 <p id="msg"></p>
@@ -106,11 +105,11 @@ transform: translate(-50%, -50%);
 
 <input class="pole" type="text" name="nazwisko" id="nazwisko" required>
 
-<p>Numer telefonu</p>
+<p>Numer </p>
 
 <label for="numer"></label>
 
-<input class="pole" type="number" name="numer" id="numer" required>
+<input class="pole" type="number" name="numer" id="numer" maxlength="9" required>
 
 <p>Adres e-mail</p>
 
@@ -133,7 +132,7 @@ transform: translate(-50%, -50%);
 <br>
 <br>
 
-<a href="logowanie_k.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin-left:-95px;" class="przycisk" id="rejestracja_p" style="font-weight:bold;" type="submit">ZAREJESTRUJ</button></a>
+<a href="logowanie_k.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold;" class="przycisk" id="rejestracja_p" style="font-weight:bold;" type="submit">ZAREJESTRUJ</button></a>
 
 </fieldset>
 
@@ -141,8 +140,8 @@ transform: translate(-50%, -50%);
 
 </div>
 
-<a href="logowanie_k.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin-right:-130px; margin-top:-53px" class="przycisk" id="logowanie_p" style="font-weight:bold;">POWRÓT</button></a>
-
+<a href="index.html"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin-right:-130px; margin-top:-53px" class="przycisk" id="logowanie_p" style="font-weight:bold;">POWRÓT</button></a>
+<a href="logowanie_k.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin-left:-95px;" class="przycisk" id="rejestracja_p" style="font-weight:bold;" type="submit">LOGOWANIE</button></a>
 </center>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

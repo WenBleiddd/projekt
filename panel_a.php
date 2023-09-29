@@ -1,3 +1,18 @@
+<?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    // Jeśli nie jest zalogowany, przekieruj go do strony logowania
+    header("Location: logowanie_k.php");
+    exit();
+}
+
+// Sprawdź, czy użytkownik ma poziom dostępu administratora
+if ($_SESSION['rola'] !== 'administrator') {
+    // Jeśli nie jest administratorem, przekieruj go gdzieś indziej lub zablokuj dostęp
+    header("Location: index.html");
+    exit();
+}
+    ?>
 <html>
 
 <head>

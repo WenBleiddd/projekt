@@ -1,3 +1,13 @@
+<?php
+if (isset($_GET['error'])) {
+    $error = $_GET['error'];
+    if ($error === "empty") {
+        echo "Proszę uzupełnić oba pola loginu i hasła.";
+    } elseif ($error === "invalid") {
+        echo "Błędny login lub hasło. Spróbuj ponownie.";
+    }
+}
+?>
 <html>
 
 <head>
@@ -89,7 +99,6 @@ transform: translate(-50%, -50%);
 <div class="login">
 
 <fieldset><legend><label><h1>LOGOWANIE</h1></label></legend>
-<h5>PANEL KLIENTA</h5>
 
 <form action="logowanie_k_php.php" method="post">
 
@@ -112,16 +121,17 @@ transform: translate(-50%, -50%);
 <br>
 <br>
 
-<a href="panel_k.php"><button class="przycisk" style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin-left:-123px;" id="logowanie_p" style="font-weight:bold;" type="submit">ZALOGUJ</button></a>
+<a href="panel_k.php"><button class="przycisk" style="font-family: 'Montserrat', sans-serif; font-weight:bold; " id="logowanie_p" style="font-weight:bold;" type="submit">ZALOGUJ</button></a>
 
 </fieldset>
 
 </form>
 
 </div>
-
-<a href="rejestracja.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin-right:-93px; margin-top:-53px" class="przycisk" id="rejestracja_p" style="font-weight:bold;" type="submit">REJESTRACJA</button></a>
-
+<div style="text-align: center;">
+<a href="index.html"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin:10px 0" class="przycisk" id="logowanie_p" style="font-weight:bold; "  >POWRÓT</button></a>
+<a href="rejestracja.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold;  margin:10px 0" class="przycisk" id="rejestracja_p" style="font-weight:bold;" type="submit">REJESTRACJA</button></a>
+</div>
 </center>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
