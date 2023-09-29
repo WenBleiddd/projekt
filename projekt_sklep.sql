@@ -32,6 +32,7 @@ CREATE TABLE `klienci` (
   `imie` varchar(30) NOT NULL,
   `nazwisko` varchar(30) NOT NULL,
   `numer` int(9) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `login` varchar(30) NOT NULL,
   `haslo` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -47,6 +48,7 @@ CREATE TABLE `pracownicy` (
   `imie` varchar(30) NOT NULL,
   `nazwisko` varchar(30) NOT NULL,
   `numer` int(9) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `login` varchar(30) NOT NULL,
   `haslo` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
