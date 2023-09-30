@@ -1,13 +1,4 @@
-<?php
-if (isset($_GET['error'])) {
-    $error = $_GET['error'];
-    if ($error === "empty") {
-        echo "Proszę uzupełnić oba pola loginu i hasła.";
-    } elseif ($error === "invalid") {
-        echo "Błędny login lub hasło. Spróbuj ponownie.";
-    }
-}
-?>
+
 <html>
 
 <head>
@@ -134,8 +125,6 @@ transform: translate(-50%, -50%);
 </div>
 </center>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="rejestracja_skrypt.js"></script>
 
 </body>
 
