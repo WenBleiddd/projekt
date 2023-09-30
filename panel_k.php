@@ -41,7 +41,7 @@ background-color:#5C6BC0;
 
 <h2>Panel klienta</h2>
 
-<form action="wyloguj_k.php" method="post">
+<form action="wyloguj_a.php" method="post">
 
 <button class="przycisk" style="font-family: 'Montserrat', sans-serif; font-weight:bold;">WYLOGUJ</button>
 
