@@ -13,5 +13,4 @@ try {
     echo 'Połączenie nie zostało nawiązane: ' . $e->getMessage();
     exit();
 }
-
 ?>

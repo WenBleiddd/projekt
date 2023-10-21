@@ -1,13 +1,3 @@
-<?php
-if (isset($_GET['error'])) {
-    $error = $_GET['error'];
-    if ($error === "empty") {
-        echo "Proszę uzupełnić oba pola loginu i hasła.";
-    } elseif ($error === "invalid") {
-        echo "Błędny login lub hasło. Spróbuj ponownie.";
-    }
-}
-?>
 <html>
 
 <head>
@@ -47,25 +37,23 @@ background-color:#191919;
 color:white;
 padding:10px;
 margin-top:10px;
-margin-bottom:-10px;
-margin-left:2.2px;
-margin-right:2.2px;
+margin-bottom:10px;
 }
 
 .przycisk:hover{
-background-color:#5C6BC0;
+background-color:#FF7043;
 }
 
 h5{
 margin-top:-20px;
 margin-bottom:30px;
-color:#1A237E;
+color:#BF360C;
 }
 
 .A{
 position:absolute;
 z-index:-2;
-background-color:#9FA8DA;
+background-color:#FFAB91;
 width:450px;
 height:450px;
 left: 50%;
@@ -99,8 +87,9 @@ transform: translate(-50%, -50%);
 <div class="login">
 
 <fieldset><legend><label><h1>LOGOWANIE</h1></label></legend>
+<h5>PANEL ADMINISTRATORA</h5>
 
-<form action="logowanie_k_php.php" method="post">
+<form action="logowanie_a_php.php" method="post">
 
 
 <p>Login</p>
@@ -121,17 +110,15 @@ transform: translate(-50%, -50%);
 <br>
 <br>
 
-<a href="panel_k.php"><button class="przycisk" style="font-family: 'Montserrat', sans-serif; font-weight:bold; " id="logowanie_p" style="font-weight:bold;" type="submit">ZALOGUJ</button></a>
 
+<a href="panel_a.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold;  margin-top:10px; " class="przycisk" style="font-weight:bold;" type="submit">ZALOGUJ</button></a>
 </fieldset>
 
 </form>
+<a href="index.html"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold;  margin:10px 0; " class="przycisk" id="logowanie_p" style="font-weight:bold;">POWRÓT</button></a>
 
 </div>
-<div style="text-align: center;">
-<a href="index.html"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin:10px 0" class="przycisk" id="logowanie_p" style="font-weight:bold; "  >POWRÓT</button></a>
-<a href="rejestracja.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold;  margin:10px 0" class="przycisk" id="rejestracja_p" style="font-weight:bold;" type="submit">REJESTRACJA</button></a>
-</div>
+
 </center>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

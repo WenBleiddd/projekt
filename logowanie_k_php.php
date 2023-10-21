@@ -16,8 +16,7 @@ if (isset($_POST['login']) && isset($_POST['haslo'])) {
     $haslo = validate($_POST['haslo']);
 
     if (empty($login) || empty($haslo)) {
-        header("Location: logowanie_k.php");
-        echo("pusty login lub hasło");
+        header("Location: logowanie_k.php?error=empty");
         
     } else {
 
@@ -46,22 +45,13 @@ if (isset($_POST['login']) && isset($_POST['haslo'])) {
                exit();
             }
         } else {
-            
-           echo "<p>błędny login lub hasło</p>";
-           echo "<br>";
-           echo "    <a href='logowanie_k.php'><button style='font-family: 'Montserrat', sans-serif; font-weight:bold; margin:10px 0' class='przycisk' id='logowanie_p' style='font-weight:bold; '  >POWRÓT</button></a>";
-           exit();
+           echo "abc";
         }
     }
 
 } else {
-    header("Location: logowanie_k.php");
-   echo"błędny login lub hasło";
+    
+   
     exit();
 }
 ?>
-<html>
-    <p>Błędny login lub hasło</p>
-    <a href="logowanie_k.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; " class="przycisk" id="logowanie_p" style="font-weight:bold; "  >POWRÓT</button></a>
-
-</html>
