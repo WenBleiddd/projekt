@@ -29,7 +29,7 @@ background-color:#5C6BC0;
     <p>sklep</p>
     <?php
     include "baza.php";
-    $stmt = $pdo->query('SELECT * FROM projekt_sklep.produkty');
+    $stmt = $pdo->query('SELECT * FROM produkty');
 ?>
     <section class="section0">
         <table class="section0-table">
@@ -43,9 +43,9 @@ background-color:#5C6BC0;
             <?php
                 while($row = $stmt->fetch()) {
                     echo '<tr>';
-                    echo '<td>'.$row['ID_pracownik'].'</td>';
+                    echo '<td>'.$row['id_produktu'].'</td>';
                     echo '<td>'.$row['nazwa'].'</td>';
-                    echo '<td>'.$row['id_kategoria'].'</td>';
+                    echo '<td>'.$row['id_kategorii'].'</td>';
                     echo '<td>'.$row['cena'].'</td>';
                     echo '</tr>';
                 }
