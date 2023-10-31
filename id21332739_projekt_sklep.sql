@@ -53,7 +53,8 @@ CREATE TABLE `klienci` (
   `numer` int(9) NOT NULL,
   `email` varchar(30) NOT NULL,
   `login` varchar(30) NOT NULL,
-  `haslo` text NOT NULL
+  `haslo` text NOT NULL,
+  `notatka` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -176,6 +177,12 @@ ALTER TABLE `produkty`
 ALTER TABLE `produkty`
   ADD CONSTRAINT `pro_kat` FOREIGN KEY (`id_kategorii`) REFERENCES `kategoria` (`id_kategorii`);
 COMMIT;
+
+create table parametry(
+`id_parametrow` int(11) primary key,
+  `parametry` varchar(255),
+  `id_produktu` int(11)
+)
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
