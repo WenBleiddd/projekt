@@ -1,3 +1,7 @@
+<?php
+include 'baza.php';
+session_start();
+    ?>
 <html>
 
 <head>
@@ -44,8 +48,11 @@ background-color:#5C6BC0;
 <form action="wyloguj_a.php" method="post">
 
 <button class="przycisk" style="font-family: 'Montserrat', sans-serif; font-weight:bold;">WYLOGUJ</button>
-
+ <br>
+    
 </form>
+<a href="zamowienie.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin-top:10px"class="przycisk" style="font-weight:bold;">ZAMÓW</button></a>
+
 
 </center>
 

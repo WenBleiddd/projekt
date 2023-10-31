@@ -140,7 +140,7 @@ transform: translate(-50%, -50%);
 
 </div>
 
-<a href="index.html"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin-right:-130px; margin-top:-53px" class="przycisk" id="logowanie_p" style="font-weight:bold;">POWRÓT</button></a>
+<a href="index.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin-right:-130px; margin-top:-53px" class="przycisk" id="logowanie_p" style="font-weight:bold;">POWRÓT</button></a>
 <a href="logowanie_k.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin-left:-95px;" class="przycisk" id="rejestracja_p" style="font-weight:bold;" type="submit">LOGOWANIE</button></a>
 </center>
 

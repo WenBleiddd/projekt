@@ -1,6 +1,6 @@
 <?php
 include('baza.php');
-$mysqli = new mysqli("localhost", "root", "", "projekt_sklep");
+$mysqli = new mysqli("localhost", "id21332739_admin", "zaq1@WSX", "id21332739_projekt_sklep");
 $bd = $conn;
 
 

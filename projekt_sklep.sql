@@ -34,7 +34,11 @@ CREATE TABLE `klienci` (
   `numer` int(9) NOT NULL,
   `email` varchar(30) NOT NULL,
   `login` varchar(30) NOT NULL,
+<<<<<<< Updated upstream
   `haslo` varchar(30) NOT NULL
+=======
+  `haslo` varchar(255) NOT NULL
+>>>>>>> Stashed changes
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------

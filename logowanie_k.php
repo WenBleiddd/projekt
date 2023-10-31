@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 <html>
 
 <head>
@@ -120,7 +123,7 @@ transform: translate(-50%, -50%);
 
 </div>
 <div style="text-align: center;">
-<a href="index.html"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin:10px 0" class="przycisk" id="logowanie_p" style="font-weight:bold; "  >POWRÓT</button></a>
+<a href="index.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; margin:10px 0" class="przycisk" id="logowanie_p" style="font-weight:bold; "  >POWRÓT</button></a>
 <a href="rejestracja.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold;  margin:10px 0" class="przycisk" id="rejestracja_p" style="font-weight:bold;" type="submit">REJESTRACJA</button></a>
 </div>
 </center>

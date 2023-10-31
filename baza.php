@@ -1,10 +1,10 @@
 <?php
 
 $host = 'localhost';
-$dbname = 'projekt_sklep';
-$user = 'root';
-$pass = '';
-$conn = mysqli_connect("localhost","root","","projekt_sklep");
+$dbname = 'id21332739_projekt_sklep';
+$user = 'id21332739_admin';
+$pass = 'zaq1@WSX';
+$conn = mysqli_connect("localhost","id21332739_admin","zaq1@WSX","id21332739_projekt_sklep");
 
 try {
     $pdo = new PDO('mysql:host='.$host.';dbname='.$dbname, $user, $pass);
@@ -13,5 +13,9 @@ try {
     echo 'Połączenie nie zostało nawiązane: ' . $e->getMessage();
     exit();
 }
+<<<<<<< Updated upstream
 
 ?>
+=======
+?>
+>>>>>>> Stashed changes
