@@ -102,6 +102,7 @@ background-color:#FF7043;
   <a href="zarzadzanie_produktami.php" class="A">Zarządzanie produktami</a>|
   <a href="zarzadzanie_kategoriami.php" class="A">Zarządzanie kategoriami</a>|
   <a href="zarzadzanie_parametrami.php" class="A">Zarządzanie parametrami</a>|
+  <a href="zarzadzanie_zamowieniami.php" class="A">Zarządzanie zamowieniami</a>
   <a href="" class="A">Dostawa i płatność</a>
   <a href="wyloguj_a.php" class="wyloguj">WYLOGUJ</a>
 
