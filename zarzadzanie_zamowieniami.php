@@ -264,20 +264,23 @@ label, input { display:block; }
                     </tr>
                     </thead>
                     <tbody>
-                    <?php
-                    foreach ($stmt as $row){
-                      include('baza.php');
-                      $query=mysqli_query($conn,"select * from `zamowienia`");
+                      <?php
                     
-                        ?>
-                        <tr>
-                        <td><?php echo $row['id_zamowienia']; ?></td>
-                          <td><?php echo $row['ID_klient']; ?></td>
-                          <td><?php echo $row['nazwa']; ?></td>
-                          <td><?php echo $row['ilosc']; ?></td>
-                          <td><?php echo $row['cena_za_jeden']; ?></td>
-                          <td><?php echo $row['cena']; ?></td>
-                          <td><?php echo $row['data']; ?></td>
+                      include('baza.php');
+                      $query = mysqli_query($conn, "SELECT zamowienia.id_zamowienia, zamowienia.ID_klient, klienci.imie, klienci.nazwisko, zamowienia.nazwa, zamowienia.ilosc, zamowienia.cena_za_jeden, zamowienia.cena, zamowienia.data FROM zamowienia JOIN klienci ON zamowienia.ID_klient = klienci.ID_klient");
+
+        while ($row = mysqli_fetch_assoc($query)) {
+        ?>
+            <tr>
+                <td><?php echo $row['id_zamowienia']; ?></td>
+                <td><?php echo $row['ID_klient']; ?></td>
+                <td><?php echo $row['imie']; ?></td>
+                <td><?php echo $row['nazwisko']; ?></td>
+                <td><?php echo $row['nazwa']; ?></td>
+                <td><?php echo $row['ilosc']; ?></td>
+                <td><?php echo $row['cena_za_jeden']; ?></td>
+                <td><?php echo $row['cena']; ?></td>
+                <td><?php echo $row['data']; ?></td>
                           <td style="background-color:white;">
                           </td>
                         </tr>
