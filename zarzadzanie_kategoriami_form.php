@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <?php
 	include('baza.php');
 	$id=$_GET['id'];

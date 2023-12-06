@@ -19,8 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $productName = $row['nazwa'];
         $unitPrice = $row['cena'];
         $totalPrice = $unitPrice * $quantity;
+        $address = $_POST['adres'];
+$paymentMethodID = $_POST['platnosc'];
+
+$sqlOrder = "INSERT INTO zamowienia (ID_klient, nazwa, ilosc, cena_za_jeden, cena, adres, platnosc) VALUES ('$loggedInUsername', '$productName', $quantity, $unitPrice, $totalPrice, '$address', $paymentMethodID)";
         
-        $sqlOrder = "INSERT INTO zamowienia (login, nazwa, ilosc, cena_za_jeden, cena) VALUES ('$loggedInUsername', '$productName', $quantity, $unitPrice, $totalPrice)";
 
         if ($conn->query($sqlOrder) === TRUE) {
             echo 'Zamówienie złożone dla uzytkownika o id ' . $loggedInUsername . '. Cena: ' . $totalPrice .'zł';
@@ -58,6 +61,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <label for="ilosc">ilosc:</label>
     <input type="number" name="ilosc" required><br>
+    <label for="adres">Adres:</label>
+    <input type="text" name="adres" required><br>
+
+    <label for="platnosc">Metoda płatności:</label>
+    <select name="platnosc" required>
+        <?php
+        $sqlPayments = "SELECT * FROM platnosci";
+        $resultPayments = $conn->query($sqlPayments);
+
+        while ($row = $resultPayments->fetch_assoc()) {
+            echo '<option value="' . $row['id_platnosc'] . '">' . $row['nazwa_platnosci'] . '</option>';
+        }
+        ?> </select><br>
 
     <button type="submit">Złóż zamówienie</button>
 </form>

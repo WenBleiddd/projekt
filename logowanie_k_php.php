@@ -16,12 +16,7 @@ if (isset($_POST['login']) && isset($_POST['haslo'])) {
 
     if (empty($login) || empty($haslo)) {
         header("Location: logowanie_k.php");
-<<<<<<< Updated upstream
-        echo("pusty login lub hasło");
-        
-=======
         exit();
->>>>>>> Stashed changes
     } else {
 
         $sql = "SELECT * FROM klienci WHERE login='$login'";
@@ -52,28 +47,16 @@ if (isset($_POST['login']) && isset($_POST['haslo'])) {
                 exit();
             }
         } else {
-<<<<<<< Updated upstream
-            
-           echo "<p>błędny login lub hasło</p>";
-           echo "<br>";
-           echo "    <a href='logowanie_k.php'><button style='font-family: 'Montserrat', sans-serif; font-weight:bold; margin:10px 0' class='przycisk' id='logowanie_p' style='font-weight:bold; '  >POWRÓT</button></a>";
-           exit();
-=======
             echo "<p>błędny login lub hasło</p>";
             echo "<br>";
             echo "<a href='logowanie_k.php'><button style='font-family: 'Montserrat', sans-serif; font-weight:bold; margin:10px 0' class='przycisk' id='logowanie_p' style='font-weight:bold; '  >POWRÓT</button></a>";
             exit();
->>>>>>> Stashed changes
         }
     }
 
 } else {
     header("Location: logowanie_k.php");
-<<<<<<< Updated upstream
-   echo"błędny login lub hasło";
-=======
     echo "błędny login lub hasło";
->>>>>>> Stashed changes
     exit();
 }
 
@@ -81,8 +64,4 @@ if (isset($_POST['login']) && isset($_POST['haslo'])) {
 <html>
     <p>Błędny login lub hasło</p>
     <a href="logowanie_k.php"><button style="font-family: 'Montserrat', sans-serif; font-weight:bold; " class="przycisk" id="logowanie_p" style="font-weight:bold; "  >POWRÓT</button></a>
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 </html>

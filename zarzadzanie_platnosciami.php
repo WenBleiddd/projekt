@@ -159,7 +159,7 @@ label, input { display:block; }
     .validateTips { border: 1px solid transparent; padding: 0.3em; }
 
 
-#modyfikacja, #notatka{
+#modyfikacja, #usuwanie, #dodawanie{
     padding:5px;
     border-radius:3px;
     border-color:white;
@@ -176,14 +176,26 @@ label, input { display:block; }
     margin-left:3px;
 }
 
-#modyfikacja:hover, #notatka:hover{
+#modyfikacja:hover{
   background-color:#0099FF;
   border-color:#0099FF;
   color:white;
   text-decoration:none;
 }
 
+#dodawanie:hover{
+  background-color:#33CC00;
+  border-color:#33CC00;
+  color:white;
+  text-decoration:none;
+}
 
+#usuwanie:hover{
+  background-color:red;
+  border-color:red;
+  color:white;
+  text-decoration:none;
+}
 
 </style>
 
@@ -219,12 +231,11 @@ label, input { display:block; }
     <?php
 
     if(isset($_POST['submit']) && $_POST['search']!=''){
-        $stmt = $pdo->prepare("SELECT * FROM zamowienia WHERE nazwa LIKE :nazwa OR ID_klient LIKE :id_klient");
-        $stmt -> bindValue(':nazwa', '%'.$_POST['search'].'%', PDO::PARAM_STR);
-        $stmt -> bindValue(':id_klient', '%'.$_POST['search'].'%', PDO::PARAM_STR);
+        $stmt = $pdo->prepare("SELECT * FROM platnosci WHERE nazwa_platnosci LIKE :platnosc");
+        $stmt -> bindValue(':platnosc', '%'.$_POST['search'].'%', PDO::PARAM_STR);
         $stmt->execute();
     }else{
-        $stmt = $pdo->query('SELECT * FROM zamowienia');
+        $stmt = $pdo->query('SELECT * FROM platnosci');
     }
 
     ?>
@@ -254,47 +265,35 @@ label, input { display:block; }
                 <table id="table">
                     <thead>
                     <tr>
-                        <th>Id_zamowienia</th>
-                        <th>ID_klient</th>
-                        <th>Imie</th>
-                        <th>Nazwisko</th>
-                        <th>Produkt</th>
-                        <th>Ilosc</th>
-                        <th>Cena za jeden</th>
-                        <th>Cena całkowita</th>
-                        <th>platnosc</th>
-                        <th>data</th>
-                
+                        <th>Id</th>
+                        <th>Platnosc</th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-                    
+                    foreach ($stmt as $row){
                       include('baza.php');
-                      $query = mysqli_query($conn, "SELECT zamowienia.id_zamowienia, zamowienia.ID_klient, klienci.imie, klienci.nazwisko, zamowienia.nazwa, zamowienia.ilosc, zamowienia.cena_za_jeden, zamowienia.cena, zamowienia.data FROM zamowienia JOIN klienci ON zamowienia.ID_klient = klienci.ID_klient");
-
-        while ($row = mysqli_fetch_assoc($query)) {
-        ?>
-            <tr>
-                <td><?php echo $row['id_zamowienia']; ?></td>
-                <td><?php echo $row['ID_klient']; ?></td>
-                <td><?php echo $row['imie']; ?></td>
-                <td><?php echo $row['nazwisko']; ?></td>
-                <td><?php echo $row['nazwa']; ?></td>
-                <td><?php echo $row['ilosc']; ?></td>
-                <td><?php echo $row['cena_za_jeden']; ?></td>
-                <td><?php echo $row['cena']; ?></td>
-                <td><?php echo $row['platnosc'];?></td>
-                <td><?php echo $row['data']; ?></td>
+                      $query=mysqli_query($conn,"select * from `platnosci`");
+                      
+                        ?>
+                        <tr>
+                        <td><?php echo $row['id_platnosc']; ?></td>
+                          <td><?php echo $row['nazwa_platnosci']; ?></td>
                           <td style="background-color:white;">
+                            <a id="modyfikacja" href="zarzadzanie_platnosciami_form.php?id=<?php echo $row['id_platnosc']; ?>">MODYFIKUJ</a>
+                            <a id="usuwanie" href="zarzadzanie_platnosciami_us.php?id=<?php echo $row['id_platnosc']; ?>">✖</a>
                           </td>
                         </tr>
-                        <?php }?>
-                    </tbody>
+
+                        <?php
+                      
+                    }
+                    ?>
                     
+                    </tbody>
             
     </table>
-
+    <a id="dodawanie" href="zarzadzanie_platnosciami_form_dod.php?id=<?php echo $row['id_platnosc']; ?>">DODAJ</a>
             </div>
         </div>
     </div>
